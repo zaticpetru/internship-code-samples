@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The charset attribute specifies the character encoding for the HTML document. -->
+    <meta charset="UTF-8">
+
+    <!-- The width=device-width part sets the width of the page to follow the screen-width of the device. -->
+    <!-- The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS demo - Colors</title>
+
+    <link rel="stylesheet" href="css/main.css">   
+
+</head>
+<body class="surface-1">
+    <input type="checkbox" id="show-menu" hidden />
+    <input type="checkbox" id="change-color-theme" hidden />
+
+    <div class="menu margin-center surface-4 rad-shadow">
+        <label for="show-menu" class="show-menu-btn margin-center min-content p-1">
+            <i class="gg-menu-boxed"></i>
+        </label>
+
+        <nav class="margin-center p-1">
+            <a href="/">Home</a>
+            <a href="/colors.html">Colors</a>
+            <a href="/cards.html">Cards</a>
+            <a href="#">Grid</a>
+            <a href="#">About</a>
+            <label for="change-color-theme">
+                <i class="gg-dark-mode"></i>
+            </label>
+        </nav>
+    </div>
+
+    <header class="p-1">
+        <h1 class="rainbow-text unselectable">a little bit of CSS</h1>
+    </header>
+
+    <main class="margin-center flex-container">
+        <article class="p-1 two">
+            <form id="theme-switcher">
+                <div>
+                    <input checked type="radio" id="auto" name="theme" value="auto">
+                    <label for="auto">Auto</label>
+                </div>
+                <div>
+                    <input type="radio" id="light" name="theme" value="light">
+                    <label for="light">Light</label>
+                </div>
+                <div>
+                    <input type="radio" id="dark" name="theme" value="dark">
+                    <label for="dark">Dark</label>
+                </div>
+                <div>
+                    <input type="radio" id="dim" name="theme" value="dim">
+                    <label for="dim">Dim</label>
+                </div>
+            </form>
+            <section>
+                <div class="text-samples">
+                    <h1 class="text-1">
+                        <span class="swatch brand rad-shadow"></span>
+                        Brand
+                    </h1>
+                    <h1 class="text-1">
+                        <span class="swatch text-1 rad-shadow"></span>
+                        Text Color 1
+                    </h1>
+                    <h1 class="text-2">
+                        <span class="swatch text-2 rad-shadow"></span>
+                        Text Color 2
+                    </h1>
+                    <h1 class="accent">
+                        <span class="swatch accent rad-shadow"></span>
+                        Accent color
+                    </h1>
+                    <p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="text-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="accent">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <br />
+                </div>
+            </section>
+
+            <section>
+                <div class="surface-samples p-1">
+                    <div class="surface-1 rad-shadow">1</div>
+                    <div class="surface-2 rad-shadow">2</div>
+                    <div class="surface-3 rad-shadow">3</div>
+                    <div class="surface-4 rad-shadow">4</div>
+                </div>
+            </section>
+
+            <section>
+                <div class="surface-samples p-1">
+                    <div class="info rad-shadow">I</div>
+                    <div class="success rad-shadow">S</div>
+                    <div class="warning rad-shadow">W</div>
+                    <div class="failure rad-shadow">F</div>
+                </div>
+            </section>
+        </article>
+        <div class="flex-separator"></div>
+        <aside class="p-1 one">
+            <h2>Use HSL colors</h2>
+            <p>Info about css colors: <a href="https://web.dev/learn/css/color/">web.dev/learn/css/color</a>.</p>
+        </aside> 
+    </main>
+
+    <footer class="margin-center border-radius-t-1 surface-4" >
+        <small>Original footer content</small>
+        <small>&copy; 2022 - you know we copy</small>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

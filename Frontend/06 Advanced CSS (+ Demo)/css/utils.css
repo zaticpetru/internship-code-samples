@@ -1,0 +1,151 @@
+/* || Utility classes */
+.no-bullet {
+    list-style: none;
+}
+
+.margin-center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.min-content {
+    width: min-content;
+}
+
+.unselectable {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.rainbow-text {
+    background-size: 90rem 90rem;
+    background-image: linear-gradient(to right, #ff0, #f00, #000064, #0fa1a1, #ff0080, #f00, #0f0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 5s ease 2;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.border-radius-1 {
+    border-radius: 1rem;
+}
+
+.border-radius-t-1 {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.accent-color {
+    color: var(--accent);
+}
+
+.m-1-y {
+    /* https://web.dev/learn/css/logical-properties/ */
+    margin-block: var(--base-spacing);
+    /* equivalent to: */
+    /* margin-top: var(--base-spacing); */
+    /* margin-bottom: var(--base-spacing); */
+}
+
+.p-1 {
+    padding: var(--base-spacing);
+}
+
+.p-2 {
+    padding: calc(var(--base-spacing) * 2);
+}
+
+.m-1 {
+    margin: var(--base-spacing);
+}
+
+.m-2 {
+    margin: calc(var(--base-spacing) * 2);
+}
+
+.m-2-y {
+    margin-block: calc(var(--base-spacing) * 2);
+}
+
+.m-1-x {
+    margin-inline: var(--base-spacing);
+}
+
+.m-2-x {
+    margin-inline: calc(var(--base-spacing) * 2);
+}
+
+.p-1-x {
+    padding-inline: var(--base-spacing);
+}
+
+.p-2-x {
+    padding-inline: calc(var(--base-spacing) * 2);
+}
+
+.p-1-y {
+    padding-block: var(--base-spacing);
+}
+
+.p-2-y {
+    padding-block: calc(var(--base-spacing) * 2);
+}
+
+
+.flex-separator {
+    align-self: stretch;
+    margin: 1rem;
+
+    border: var(--text1) 1px solid;
+}
+
+.border-left-separator {
+    border-left: var(--text1) 2px solid;
+}
+
+.ex-section {
+    display: grid;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/minmax */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: var(--base-spacing);
+}
+
+.ex-area {
+    min-height: 200px;
+}
+
+.ex-container {
+    resize: both;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.line-decorated {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.line-decorated::before,
+.line-decorated::after {
+    content: "";
+    border-top: 0.1rem double var(--text1);
+    align-self: center;
+    margin: 0 1rem;
+}
