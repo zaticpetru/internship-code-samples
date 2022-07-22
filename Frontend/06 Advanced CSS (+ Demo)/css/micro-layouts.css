@@ -1,0 +1,47 @@
+.card-1 {
+    display: flex;
+    /* align along cross-axis */
+    /* https://developer.mozilla.org/en-US/docs/Glossary/Cross_Axis */
+    align-items: center;
+    /* align along the main axis */
+    /* we use it here for aligning on wrap */
+    /* https://developer.mozilla.org/en-US/docs/Glossary/Main_Axis */
+    justify-content: center;
+
+    /* allow elements to wrap to next line if not enough space is available */
+    flex-wrap: wrap;
+    gap: var(--base-spacing);
+}
+
+.card-1 .content {
+    /* take 3/4 of available space */
+    flex: 3;
+    /* don't get smaller than 200px */
+    min-inline-size: 150px;
+    align-self: stretch;
+}
+
+.card-1 .illustration {
+    /* take 1/4 of available space */
+    flex: 1;
+    /* limit size to min 100px max 125px */
+    min-inline-size: 100px;
+    max-inline-size: 125px;
+}
+
+.max-width-150px {
+    max-width: none;
+}
+
+.max-width-button {
+    color: blue;
+}
+
+#toggle-max-width:checked ~ .ex-area .ex-container .max-width-150px {
+    max-width: 200px;
+}
+
+/* todo: find a better solution for label */
+#toggle-max-width:checked ~ div .max-width-button {
+    color: var(--accent);
+}

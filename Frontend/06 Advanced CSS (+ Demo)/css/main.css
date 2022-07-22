@@ -12,6 +12,9 @@
 /* || Utility classes */
 @import 'utils.css';
 
+/* || Micro-layouts */
+@import 'micro-layouts.css';
+
 /* || General styling */
 
 /* common best practice is to define custom properties on the :root pseudo-class,
@@ -110,7 +113,7 @@ then add/overwrite in media queries for wider screens */
     transition: color 500ms;
 }
 
-#show-menu:checked ~ .menu .show-menu-btn  {
+#show-menu:checked ~ .menu .show-menu-btn {
     color: var(--failure);
 }
 
@@ -181,7 +184,6 @@ nav .gg-dark-mode {
     flex-direction: column;
     gap: 1rem;
     max-width: 100rem;
-    margin-bottom: 1.5rem;
 }
 
 @media (min-width: 600px) {

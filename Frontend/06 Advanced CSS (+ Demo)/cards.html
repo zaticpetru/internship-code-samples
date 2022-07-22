@@ -8,6 +8,8 @@
     <!-- The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="icon" href="img/css-extension-x64.png">
+
     <title>CSS demo - Micro layouts</title>
 
     <link rel="stylesheet" href="css/main.css">   
@@ -52,6 +54,74 @@
                 <p>In the future, creating components that can adapt to their container will become much easier with the implementation of Container Queries. For now, however, you need to consider the existing ways to create reusable and responsive micro-layouts.</p>
             </aside>
         </div>
+
+        <div class="ex-section m-2-y surface-2 rad-shadow">
+            <div class="ex-area m-1">
+                <div class="ex-container surface-4">
+                    <div class="card-1 surface-3 m-1 border-radius-1">
+                        <div class="illustration m-1">
+                            <img src="img/css-extension-x512.png" alt="css-logo" />
+                        </div>
+                        <div class="content p-1 surface-2 border-radius-1">
+                            <h3>Card content</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-1-y p-2-x border-left-separator">
+                <p>Responsive card with flexbox</p>
+                <p>In this example we have components of a card flexible (as the flexbox name suggest).
+                We can declare elements with maximum or minimum size and let other elements flex to fit accordingly</p>
+                <p>In this example image takes 1/4 of available space, but it never get larger than 125px. The text takes up the other 3/4 of available space </p>
+            </div>
+        </div>
+
+
+        <div class="ex-section m-2-y rad-shadow">
+            <input type="checkbox" id="toggle-max-width" hidden />
+            <div class="ex-area m-1">
+                <div class="ex-container surface-4 overflow-auto">
+                    <div class="flex-container flex-wrap no-gap">
+                        <div class="card-1 surface-3 m-1 border-radius-1 max-width-150px">
+                            <div class="illustration m-1">
+                                <img src="img/css-extension-x512.png" alt="css-logo" />
+                            </div>
+                            <div class="content p-1 surface-2 border-radius-1">
+                                <h3>Card content</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="card-1 surface-3 m-1 border-radius-1 max-width-150px">
+                            <div class="illustration m-1">
+                                <img src="img/css-extension-x512.png" alt="css-logo" />
+                            </div>
+                            <div class="content p-1 surface-2 border-radius-1">
+                                <h3>Card content</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                        <div class="card-1 surface-3 m-1 border-radius-1 max-width-150px">
+                            <div class="illustration m-1">
+                                <img src="img/css-extension-x512.png" alt="css-logo" />
+                            </div>
+                            <div class="content p-1 surface-2 border-radius-1">
+                                <h3>Card content</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-1-y p-2-x border-left-separator">
+                <label for="toggle-max-width" class="max-width-button unselectable">
+                    Enable max width for cards
+                </label>
+                <p>Heading with decorative lines with grid</p>
+            </div>
+        </div>
+
         <div class="ex-section m-2-y surface-2 rad-shadow">
             <div class="ex-area m-1">
                 <div class="ex-container surface-4">
@@ -75,34 +145,12 @@
             </div>
         </div>
 
-        <div class="ex-section m-2-y surface-2 rad-shadow">
-            <div class="ex-area m-1">
-                <div class="ex-container surface-4">
-                    <h3 class="line-decorated two">Heading with lines</h3>
-                </div>
-            </div>
-            <div class="p-1-y p-2-x border-left-separator">
-                <p>Heading with decorative lines with grid</p>
-            </div>
-        </div>
-
-        <div class="ex-section m-2-y rad-shadow">
-            <div class="ex-area m-1">
-                <div class="ex-container surface-4">
-                    <h3 class="line-decorated two">Heading with lines</h3>
-                </div>
-            </div>
-            <div class="p-1-y p-2-x border-left-separator">
-                <p>Heading with decorative lines with grid</p>
-                
-            </div>
-        </div>
-
     </main>
 
     <footer class="margin-center border-radius-t-1 surface-4">
         <small>Original footer content</small>
         <small>&copy; 2022 - you know we copy</small>
+        <a href="https://www.flaticon.com/free-icons/files-and-folders" title="files and folders icons">Files and folders icons created by Yuan Design - Flaticon</a>
     </footer>
 
     <script src="index.js" defer></script>
