@@ -149,3 +149,11 @@
     align-self: center;
     margin: 0 1rem;
 }
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
