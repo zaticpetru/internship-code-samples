@@ -52,6 +52,9 @@ footer {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+
     border: 1px solid var(--surface3);
     border-bottom: none;
     /* creating space for fixed menu on bottom for mobile view */

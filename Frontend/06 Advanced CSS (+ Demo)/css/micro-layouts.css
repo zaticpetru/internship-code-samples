@@ -29,12 +29,13 @@
     max-inline-size: 125px;
 }
 
+/* todo: rename to 200px */
 .max-width-150px {
     max-width: none;
 }
 
 .max-width-button {
-    color: blue;
+    color: var(--info);
 }
 
 #toggle-max-width:checked ~ .ex-area .ex-container .max-width-150px {
@@ -44,4 +45,18 @@
 /* todo: find a better solution for label */
 #toggle-max-width:checked ~ div .max-width-button {
     color: var(--accent);
+}
+
+.line-decorated {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+.line-decorated::before,
+.line-decorated::after {
+    content: "";
+    border-top: 0.1rem double var(--text1);
+    align-self: center;
+    margin: 0 1rem;
 }
