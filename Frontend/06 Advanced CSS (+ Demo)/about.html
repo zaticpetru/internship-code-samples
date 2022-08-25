@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The charset attribute specifies the character encoding for the HTML document. -->
+    <meta charset="UTF-8">
+
+    <!-- The width=device-width part sets the width of the page to follow the screen-width of the device. -->
+    <!-- The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/css-extension-x64.png">
+
+    <title>CSS demo - About</title>
+
+    <link rel="stylesheet" href="css/main.css">   
+
+</head>
+<body class="surface-1">
+    <input type="checkbox" id="show-menu" hidden />
+    <input type="checkbox" id="change-color-theme" hidden />
+
+    <div class="menu margin-center surface-4 rad-shadow">
+        <label for="show-menu" class="show-menu-btn margin-center min-content p-1">
+            <i class="gg-menu-boxed"></i>
+        </label>
+
+        <nav class="margin-center p-1">
+            <a href="/index.html">Home</a>
+            <a href="/colors.html">Colors</a>
+            <a href="/cards.html">Cards</a>
+            <a href="/grid.html">Grid</a>
+            <a href="#">About</a>
+            <label for="change-color-theme">
+                <i class="gg-dark-mode"></i>
+            </label>
+        </nav>
+    </div>
+
+    <header class="p-1">
+        <h1 class="rainbow-text unselectable">a little bit of CSS</h1>
+    </header>
+
+    <main class="margin-center" style="max-width: 100rem;">
+        <div class="flex-container rad-shadow">
+            <article class="p-1 two">
+                <h2>About</h2>
+                <p>Some resources</p>
+                <p>When we think of layouts, we often think of page-level designs. But smaller components within the page can have their own self-contained layouts.</p>
+                <p>Ideally, these component-level layouts will adjust themselves automatically, regardless of their position on the page. There may be situations where you don't know if a component will be placed into the main content column or the sidebar or both.</p>
+                <p>Here we can see how we can create flexible components that can be placed anywhere created with Flexbox or with Grid</p>
+            </article>
+            <div class="flex-separator"></div>
+            <aside class="p-1 one">
+                <h2>Looking forward to <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries">Container Queries</a></h2>
+                <p>Additional resources</p>
+                <p>In the future, creating components that can adapt to their container will become much easier with the implementation of Container Queries. For now, however, you need to consider the existing ways to create reusable and responsive micro-layouts.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="margin-center border-radius-t-1 surface-4">
+        <small>Original footer content - &copy; 2022 - you know we copy</small>
+        <small>
+            <a href="https://www.flaticon.com/free-icons/files-and-folders" title="files and folders icons">Files and folders icons created by Yuan Design - Flaticon</a>
+        </small>
+    </footer>
+
+    <script src="index.js" defer></script>
+
+</body>
+</html>
