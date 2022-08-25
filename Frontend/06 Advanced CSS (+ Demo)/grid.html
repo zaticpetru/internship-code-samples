@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- The charset attribute specifies the character encoding for the HTML document. -->
+    <meta charset="UTF-8">
+
+    <!-- The width=device-width part sets the width of the page to follow the screen-width of the device. -->
+    <!-- The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="img/css-extension-x64.png">
+
+    <title>CSS demo - Grid</title>
+
+    <link rel="stylesheet" href="css/main.css">  
+</head>
+<body class="surface-1">
+    <input type="checkbox" id="show-menu" hidden />
+    <input type="checkbox" id="change-color-theme" hidden />
+
+    <div class="menu margin-center surface-4 rad-shadow">
+        <label for="show-menu" class="show-menu-btn margin-center min-content p-1">
+            <i class="gg-menu-boxed"></i>
+        </label>
+
+        <nav class="margin-center p-1">
+            <a href="/index.html">Home</a>
+            <a href="/colors.html">Colors</a>
+            <a href="/cards.html">Cards</a>
+            <a href="#">Grid</a>
+            <a href="/about.html">About</a>
+            <label for="change-color-theme">
+                <i class="gg-dark-mode"></i>
+            </label>
+        </nav>
+    </div>
+
+    <header class="p-1">
+        <h1 class="rainbow-text unselectable">a little bit of CSS</h1>
+    </header>
+
+    <main class="margin-center" style="max-width: 100rem;">
+        <div class="flex-container rad-shadow">
+            <article class="p-1 two">
+                <h2>Grid</h2>
+                <p>Grid is a layout method designed for two-dimensional content. That is, laying things out in rows and columns at the same time.</p>
+                <p>When creating a grid layout you define a grid with rows and columns. Then you place items onto that grid, or allow the browser to auto-place them into the cells you have created. </p>
+                <p>There's a lot to grid, here is a great overview from web.dev: <a href="https://web.dev/learn/css/grid/">https://web.dev/learn/css/grid/</a></p>
+            </article>
+            <div class="flex-separator"></div>
+            <aside class="p-1 one">
+                <h2>Important Terminology:</h2>
+                <ul>
+                    <li>Grid Container</li>
+                    <li>Grid Item</li>
+                    <li>Grid Line</li>
+                    <li>Grid Cell</li>
+                    <li>Grid Track</li>
+                    <li>Grid Area</li>
+                </ul>
+                <a href="https://css-tricks.com/snippets/css/complete-guide-grid/#aa-important-terminology">Terms explained</a>
+            </aside>
+        </div>
+
+        <div class="ex-section m-2-y surface-2 rad-shadow">
+            <div class="ex-area m-1">
+                <div class="ex-container surface-4 overflow-auto">
+                    <div class="grid-container ex-1 surface-3 m-1 p-1 border-radius-1">
+                        <div class="grid-item surface-2 p-1">
+                            1fr column <br/>
+                            200px row
+                        </div>
+                        <div class="grid-item surface-2 p-1">100px colum</div>
+                        <div class="grid-item surface-2 p-1">30% column</div>
+                        <div class="grid-item surface-2 p-1">1fr row</div>
+                        <div class="grid-item surface-2 p-1">grid item</div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-1-y p-2-x border-left-separator">
+                <p>Simple grid container with grid items</p>
+                <p>We can define the columns ant rows of the grid with space-separated list of values.
+                    <br>
+                    <code class="accent">grid-template-columns: 1fr 100px 30%;</code>
+                    <br>
+                    <code class="accent">grid-template-rows: 200px 1fr;</code>
+                    <br>
+                </p>
+                <p>Values represent the size of the track, that can be a length, percentage,
+                    fraction of free space in the grid (using fr unit),
+                    or function ( auto, minmax(minVal, maxVal), max-content, min-content, fit-content(val) ).</p>
+            </div>
+        </div>
+
+
+        <div class="ex-section m-2-y rad-shadow">
+            <div>
+                <div class="ex-area m-1">
+                    <div class="ex-container surface-4 overflow-auto">
+                        <div class="grid-container ex-2 surface-3 m-1 p-1 border-radius-1">
+                            <div class="grid-item surface-2 p-1">item one</div>
+                            <div class="grid-item surface-2 p-1">item two</div>
+                            <div class="grid-item surface-2 p-1">item three</div>
+                            <div class="grid-item surface-2 p-1">item four</div>
+                            <div class="grid-item surface-2 p-1">item five</div>
+                            <div class="grid-item surface-2 p-1">item six</div>
+                            <div class="grid-item surface-2 p-1">item seven</div>
+                            <div class="grid-item surface-2 p-1">item eight</div>
+                        </div>
+                    </div>
+                </div>
+                <code class="accent p-2-x">repeat(auto-fill, minmax(100px, 1fr));</code>
+                <div class="ex-area m-1 min-height-unset">
+                    <div class="ex-container surface-4 overflow-auto">
+                        <div class="grid-container ex-2 surface-3 m-1 p-1 border-radius-1">
+                            <div class="grid-item surface-2 p-1">item one</div>
+                            <div class="grid-item surface-2 p-1">item two</div>
+                        </div>
+                    </div>
+                </div>
+                <code class="accent p-2-x">repeat(auto-fit, minmax(100px, 1fr));</code>
+                <div class="ex-area m-1 min-height-unset">
+                    <div class="ex-container surface-4 overflow-auto">
+                        <div class="grid-container ex-3 surface-3 m-1 p-1 border-radius-1">
+                            <div class="grid-item surface-2 p-1">item one</div>
+                            <div class="grid-item surface-2 p-1">item two</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-1-y p-2-x border-left-separator">
+                <p>Using auto-fill and auto-fit to create responsive grid</p>
+                <p>
+                    We are using two functions to create responsive grid: minmax() and repeat()
+                </p>
+                <p>    
+                    The minmax() function is used to create a track with a minimum and maximum size.
+                    We can use it to force a track to take an equal share of the space using minmax(0, 1fr).
+                    This makes minimum size equal to 0 an not the default min-content.
+                    <br>
+                    The repeat() function can be used to repeat any section of your track.
+                    Also we can use auto-fill and auto-fit if we don't want to specify the number of columns,
+                    but instead create as many as will fit.
+                </p>
+                <p>
+                    There is a subtle difference between auto-fill and auto-fit, it can be seen with fewer grid items.
+                    <ul>
+                        <li>auto-fill will create tracks if space is available.</li>
+                        <li>auto-fit will grow the tracks to consume space.</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="ex-section m-2-y surface-2 rad-shadow">
+            <div class="ex-area m-1">
+                <div class="ex-container surface-4">
+                    <div class="grid-container ex-4 surface-3 m-1 p-1 border-radius-1">
+                        <div class="grid-item span-col-3 surface-2 p-1">item one</div>
+                        <div class="grid-item span-row-2 span-col-2 surface-2 p-1">item two</div>
+                        <div class="grid-item span-col-2 surface-2 p-1">item three</div>
+                        <div class="grid-item span-row-2 surface-2 p-1">item four</div>
+                        <div class="grid-item span-col-3 surface-2 p-1">item five</div>
+                        <div class="grid-item surface-2 p-1">item six</div>
+                        <div class="grid-item surface-2 p-1">item seven</div>
+                        <div class="grid-item span-row-2 span-col-2 surface-2 p-1">item eight</div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-1-y p-2-x border-left-separator">
+                <p>Spanning tracks and filling gaps to create image tiles</p>
+                <p>
+
+                </p>
+            </div>
+        </div>
+
+        <div class="ex-section m-2-y rad-shadow">
+            <div class="ex-area m-1">
+                <div class="ex-container surface-4">
+                    <h3 class="line-decorated two">Heading with lines</h3>
+                </div>
+            </div>
+            <div class="p-1-y p-2-x border-left-separator">
+                <p>Heading with decorative lines with grid</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="margin-center border-radius-t-1 surface-4">
+        <small>Original footer content - &copy; 2022 - you know we copy</small>
+        <small>
+            <a href="https://www.flaticon.com/free-icons/files-and-folders" title="files and folders icons">Files and folders icons created by Yuan Design - Flaticon</a>
+        </small>
+    </footer>
+
+    <script src="index.js" defer></script>
+
+</body>
+</html>

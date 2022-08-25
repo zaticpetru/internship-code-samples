@@ -15,6 +15,9 @@
 /* || Micro-layouts */
 @import 'micro-layouts.css';
 
+/* || Grid */
+@import 'grid.css';
+
 /* || General styling */
 
 /* common best practice is to define custom properties on the :root pseudo-class,
