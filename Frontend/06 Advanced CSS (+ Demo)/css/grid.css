@@ -24,6 +24,33 @@
     grid-auto-rows: minmax(100px, auto);
 }
 
+.grid-container.ex-5 {
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas:
+        "header header header header"
+        "sidebar content content content"
+        "sidebar footer footer footer";
+
+    /* height set for possibility of resizing */
+    height: 90%;
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.content {
+    grid-area: content;
+}
+
+.footer {
+    grid-area: footer;
+}
+
 .span-row-2 {
     grid-row: auto / span 2;
 }

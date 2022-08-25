@@ -209,6 +209,36 @@
         <div class="ex-section m-2-y rad-shadow">
             <div class="ex-area m-1">
                 <div class="ex-container surface-4">
+                    <div class="grid-container ex-5 surface-3 m-1 p-1 border-radius-1">
+                        <div class="grid-item surface-2 align-center header"><p>Header</p></div>
+                        <div class="grid-item surface-2 align-center sidebar"><p>Sidebar</p></div>
+                        <div class="grid-item surface-2 align-center footer"><p>Footer</p></div>
+                        <div class="grid-item surface-2 align-center content"><p>Content</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-1-y p-2-x border-left-separator">
+                <p>Grid Template Areas</p>
+                <p>You can also name areas of the grid and place items onto those named areas.
+                    This is a lovely technique as it allows you to see what your component looks like right there in the CSS.
+                </p>
+                <p>
+                    <code class="accent">
+                        grid-template-areas:
+                        <br/>
+                        &emsp;&emsp;"header header header header"
+                        <br/>
+                        &emsp;&emsp;"sidebar content content content"
+                        <br/>
+                        &emsp;&emsp;"sidebar footer footer footer";
+                    </code>
+                </p>
+            </div>
+        </div>
+
+        <div class="ex-section m-2-y rad-shadow surface-2">
+            <div class="ex-area m-1">
+                <div class="ex-container surface-4">
                     <h3 class="line-decorated two">Heading with lines</h3>
                 </div>
             </div>
