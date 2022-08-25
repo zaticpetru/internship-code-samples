@@ -30,10 +30,10 @@
     we reserve black and white exclusively for brightest highlights and darkest shadows */
 
     /* colors for backgrounds, borders and other decorative surfaces */
-    --surface1-light: hsl(var(--brand-hue) 25% 90%);
-    --surface2-light: hsl(var(--brand-hue) 20% 99%);
-    --surface3-light: hsl(var(--brand-hue) 20% 92%);
-    --surface4-light: hsl(var(--brand-hue) 20% 85%);
+    --surface1-light: hsl(var(--brand-hue) 20% 92%);
+    --surface2-light: hsl(var(--brand-hue) 20% 85%);  
+    --surface3-light: hsl(var(--brand-hue) 20% 95%); 
+    --surface4-light: hsl(var(--brand-hue) 25% 90%);
     /* 4 surface colors were created since decorative colors tend to need more variants,
     for interactive moments like :focus or :hover */
 
