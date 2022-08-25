@@ -233,6 +233,7 @@
 /* TODO delete surface-samples classes */
 .surface-samples {
     display: flex;
+    gap: var(--base-spacing);
 }
 
 .surface-samples > * {
