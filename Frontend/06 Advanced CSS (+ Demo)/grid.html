@@ -154,24 +154,54 @@
         </div>
 
         <div class="ex-section m-2-y surface-2 rad-shadow">
+            <input type="checkbox" id="toggle-dense-packing" hidden />
             <div class="ex-area m-1">
-                <div class="ex-container surface-4">
-                    <div class="grid-container ex-4 surface-3 m-1 p-1 border-radius-1">
-                        <div class="grid-item span-col-3 surface-2 p-1">item one</div>
-                        <div class="grid-item span-row-2 span-col-2 surface-2 p-1">item two</div>
-                        <div class="grid-item span-col-2 surface-2 p-1">item three</div>
-                        <div class="grid-item span-row-2 surface-2 p-1">item four</div>
-                        <div class="grid-item span-col-3 surface-2 p-1">item five</div>
-                        <div class="grid-item surface-2 p-1">item six</div>
-                        <div class="grid-item surface-2 p-1">item seven</div>
-                        <div class="grid-item span-row-2 span-col-2 surface-2 p-1">item eight</div>
+                <div class="ex-container surface-4 overflow-auto">
+                    <div class="grid-container align-center ex-4 surface-3 m-1 p-1 border-radius-1">
+                        <div class="grid-item span-col-3 surface-2 p-1">
+                            <p class="font-size-2">1</p>
+                        </div>
+                        <div class="grid-item align-center span-row-2 span-col-2 surface-2 p-1">
+                            <p class="font-size-2">2</p>
+                        </div>
+                        <div class="grid-item align-center span-col-2 surface-2 p-1">
+                            <p class="font-size-2">3</p>
+                        </div>
+                        <div class="grid-item align-center span-row-2 surface-2 p-1">
+                            <p class="font-size-2">4</p>
+                        </div>
+                        <div class="grid-item align-center span-col-3 surface-2 p-1">
+                            <p class="font-size-2">5</p>
+                        </div>
+                        <div class="grid-item align-center surface-2 p-1">
+                            <p class="font-size-2">6</p>
+                        </div>
+                        <div class="grid-item align-center surface-2 p-1">
+                            <p class="font-size-2">7</p>
+                        </div>
+                        <div class="grid-item align-center span-row-2 span-col-2 surface-2 p-1">
+                            <p class="font-size-2">8</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="p-1-y p-2-x border-left-separator">
                 <p>Spanning tracks and filling gaps to create image tiles</p>
+                <label for="toggle-dense-packing"
+                        class="toggle-dense-packing-button unselectable">
+                        Turn on dense packing
+                </label>
                 <p>
-
+                    The default behavior of grid layout with a fully auto-placed layout is to always progress forward.
+                    If there is not enough space to fit an item, grid will leave a gap and move to the next track.
+                </p>
+                <p>
+                    We can change this behavior by giving grid-auto-flex a value of dense.
+                    This way, grid will take items later in the layout and use the to fill the gaps.
+                    Be aware that this can display items in different order from logical one.
+                </p>
+                <p>
+                    <code class="accent">grid-auto-flow: row dense;</code>
                 </p>
             </div>
         </div>
@@ -183,7 +213,11 @@
                 </div>
             </div>
             <div class="p-1-y p-2-x border-left-separator">
-                <p>Heading with decorative lines with grid</p>
+                <p>Grid can be used in many ways, even for decorative purposes.</p>
+                <p>In this example, the ::before and ::after pseudo-elements create decorative lines on either side of a heading.
+                    The heading itself is a grid container.
+                    The individual elements are laid out so that the lines always fill the available space.
+                </p>
             </div>
         </div>
 
