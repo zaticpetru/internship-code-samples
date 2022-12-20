@@ -31,3 +31,11 @@
 
   border: var(--text1) 1px solid;
 }
+
+.flex > .grow-1 {
+  flex: 1;
+}
+
+.flex > .grow-2 {
+  flex: 2;
+}

@@ -49,6 +49,8 @@ nav {
   padding-bottom: var(--base-spacing);
 
   border-top: var(--text1) solid 1px;
+
+  overflow-x: auto;
 }
 
 nav a,

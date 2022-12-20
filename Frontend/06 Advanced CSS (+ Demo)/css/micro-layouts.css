@@ -45,3 +45,33 @@
 #toggle-max-width:checked ~ div .max-width-button {
     color: var(--accent);
 }
+
+.card-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-2 .content {
+    /* take 3/4 of available space */
+    flex: 1;
+    align-self: stretch;
+}
+
+.card-2 .illustration {
+    /* take 1/4 of available space */
+    min-inline-size: 100px;
+    max-inline-size: 125px;
+}
+
+.container-inline-size {
+    container-type: inline-size;
+    min-inline-size: 180px;
+}
+
+@container (width > 300px) {
+    .card-2 {
+        flex-direction: row;
+        background-color: var(--info);
+    }
+}
