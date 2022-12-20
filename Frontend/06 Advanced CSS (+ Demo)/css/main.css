@@ -1,5 +1,5 @@
-/* https://github.com/necolas/normalize.css */
-/* small CSS file that provides better cross-browser consistency in the default styling of HTML elements. */
+/* ? https://github.com/necolas/normalize.css */
+/* ? small CSS file that provides better cross-browser consistency in the default styling of HTML elements. */
 @import 'normalize.css';
 
 /* icons from: https://css.gg/ */
@@ -18,12 +18,20 @@
 /* || Grid */
 @import 'grid.css';
 
+/* || Navigation styles, menu */
+@import 'navigation.css';
+
+/** Further reading, CSS @import: https://developer.mozilla.org/en-US/docs/Web/CSS/@import  */
+
 /* || General styling */
 
-/* common best practice is to define custom properties on the :root pseudo-class,
-so that it can be applied globally across your HTML document: */
+/* ? common best practice is to define custom properties on the :root pseudo-class,
+   ? so that it can be applied globally across your HTML document: */
 :root {
     --base-spacing: 0.75rem;
+    --container-max-width: 110rem;
+    --nav-height: 10rem;
+    --nav-height--: calc(-1 * var(--nav-height))
 }
 
 * {
@@ -31,22 +39,23 @@ so that it can be applied globally across your HTML document: */
 }
 
 html {
-    /* rem - relative to font-size of the root element - html */
-    /* default font size for html is 16px */
-    /* 14px - size used to calculate rem */
-    font-size: 16px;
+    /*? rem - relative to font-size of the root element - html */
+    /*? default font size for html is 16px */
+    /*? 14px - size used to calculate rem */
+    font-size: 14px;
     /* line height - used to set distances between lines */
     /* 2 -> 2 * element's own font size  */
     line-height: 2;
 }
 
 body {
-    /* 1. I’d like to use the "Helvetica Neue" font here, please. */
-    /* 2. If you don’t have that, try Helvetica next. */
-    /* 3. If you don’t have that, try Arial next. */
-    /* 4. All else fails, use whatever you’ve got for the generic sans-serif. */
+    /* ? 1. I’d like to use the "Helvetica Neue" font here, please. */
+    /* ? 2. If you don’t have that, try Helvetica next. */
+    /* ? 3. If you don’t have that, try Arial next. */
+    /* ? 4. All else fails, use whatever you’ve got for the generic sans-serif. */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /* further reading: https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/ */
+
+    /** further reading: https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/ */
 }
 
 header,
@@ -55,14 +64,8 @@ footer {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-
     border: 1px solid var(--surface3);
     border-bottom: none;
-    /* creating space for fixed menu on bottom for mobile view */
-    padding: var(--base-spacing);
-    padding-bottom: 3.5rem;
 }
 
 h1 {
@@ -73,136 +76,45 @@ h1 {
 a {
     color: inherit;
     text-decoration: none;
-    /* text-decoration-thickness: .01rem;
-    text-decoration-skip-ink: none;
-    text-decoration-style: wavy;
-    transition: text-decoration-color 300ms; */
 }
 
 a:hover {
     text-decoration: underline;
-    /* text-decoration-color: var(--accent); */
+    text-decoration-color: var(--accent);
 }
 
 img {
     max-width: 100%;
 }
 
-/* || navigation menu styling */
-
-/* using mobile first approach - we are writing styles for mobile first,
-then add/overwrite in media queries for wider screens */
-
-.menu {
-    position: fixed;
-    width: 100%;
-    bottom: -12.5rem;
-
-    text-align: center;
-    font-weight: bold;
-
-    border: var(--surface3) solid 1px;
-    border-radius: 1rem 1rem 0 0;
-
-    /* open menu animation from bottom: -11.5 rem to 0 */
-    transition: bottom 0.5s ease-in-out;
-
-    z-index: 2;
-}
-
-#show-menu:checked ~ .menu {
-    /* animation triggered on :checked state of checkbox for menu  */
-    bottom: 0;
-}
-.show-menu-btn {
-    display: block;
-    transition: color 500ms;
-}
-
-#show-menu:checked ~ .menu .show-menu-btn {
-    color: var(--failure);
-}
-
-
-
-nav {
-    width: 90%;
-    max-width: 42rem;
-    max-height: 12.5rem;
-
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    
-    padding-bottom: var(--base-spacing);
-
-    border-top: var(--text1) solid 1px;
-}
-
-nav a,
-nav label {
-    padding: var(--base-spacing);
-}
-
-nav .gg-dark-mode {
-    transition: color 1s ease-in;
-}
-
-/* media queries for wider screens than mobile */
-@media (min-width: 480px) {
-    .menu {
-        line-height: 1;
-        border-radius: 0 0 1rem 1rem;
-        position: initial;
-    }
-    .show-menu-btn {
-        display: none;
-    }
-    #show-menu:checked ~ nav {
-        height: auto;
-    }
-    nav {
-        height: auto;
-
-        flex-direction: row;
-        justify-content: space-around;
-
-        border-top: none;
-    }
-    footer {
-        padding-bottom: var(--base-spacing);
-    }
-}
-
-@media (min-width: 600px) {
-    .menu,
-    footer {
-        max-width: 110rem;
-    }
+.container,
+footer {
+    max-width: var(--container-max-width);
 }
 
 /* || main content styling */
 /* using universal selector * to apply styling to all children */
 
-.flex-container {
-    display: flex;
+/* 
+    ? Macro layout example using flex-box
+    ? and a media query for screens larger than 600px
+*/
+
+.flex.column-to-row-query {
     flex-direction: column;
-    gap: 1rem;
-    max-width: 100rem;
 }
 
 @media (min-width: 600px) {
-    .flex-container {
+    .flex.column-to-row-query {
         /* display: flex; */
         flex-direction: row;
     }
-    .flex-container .two {
+    .flex.column-to-row-query .two {
         /* or flex: 2 */
         flex-grow: 2;
         flex-basis: 0;
     }
-    .flex-container .one {
+    .flex.column-to-row-query .one {
         /* or flex: 1 */
         flex-grow: 1;
         flex-basis: 0;

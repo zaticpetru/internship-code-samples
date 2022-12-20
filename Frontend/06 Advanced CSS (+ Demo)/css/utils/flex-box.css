@@ -1,0 +1,33 @@
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex.direction-column {
+  flex-direction: column;
+}
+
+.flex.direction-row {
+  flex-direction: row;
+}
+
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
+.flex.justify-space-around {
+  justify-content: space-around;
+}
+
+/* 
+  * Child combinator
+  <div class="flex">
+    <div class="separator></div>
+  </div>
+*/
+.flex > .separator {
+  align-self: stretch;
+  margin: 1rem;
+
+  border: var(--text1) 1px solid;
+}

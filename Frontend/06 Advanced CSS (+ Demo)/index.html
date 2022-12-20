@@ -4,6 +4,12 @@
     <!-- The charset attribute specifies the character encoding for the HTML document. -->
     <meta charset="UTF-8">
 
+<!--
+    ? A viewport is an area where the web content can be seen. Usually, the rendered page (web content)
+    ? is bigger than the viewport. As a result, we usually use scrollbars to see the hidden content
+    ? (because the viewport can't display everything). Quoted from CSS Device Adaptation Module Level 1:
+-->
+    
     <!-- The width=device-width part sets the width of the page to follow the screen-width of the device. -->
     <!-- The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,16 +21,18 @@
     <link rel="stylesheet" href="css/main.css">   
 
 </head>
+
 <body class="surface-1">
+    <!-- Checkboxes on top for propagating CSS rules elements on the page  -->
     <input type="checkbox" id="show-menu" hidden />
     <input type="checkbox" id="change-color-theme" hidden />
 
-    <div class="menu margin-center surface-4 rad-shadow">
+    <div class="menu container margin-center surface-4 rad-shadow">
         <label for="show-menu" class="show-menu-btn margin-center min-content p-1">
             <i class="gg-menu-boxed"></i>
         </label>
 
-        <nav class="margin-center p-1">
+        <nav class="flex wrap justify-space-around column-to-row-query margin-center p-1">
             <a href="#">Home</a>
             <a href="/colors.html">Colors</a>
             <a href="/cards.html">Cards</a>
@@ -40,7 +48,7 @@
         <h1 class="rainbow-text unselectable">a little bit of CSS</h1>
     </header>
 
-    <main class="margin-center flex-container">
+    <main class="margin-center flex container column-to-row-query">
         <article class="two p-1">
             <h2>Macro layouts</h2>
             <p>Macro layouts describe the larger, page-wide organization of your interface.</p>
@@ -48,18 +56,18 @@
             <p>Before applying any layout, you should make sure that the flow of your content makes sense. This single column default ordering is what smaller screens will get.</p>
             <p>When you arrange these individual page-level components, you're designing a macro layout: a high-level view of your page. Using media queries, you can supply rules in CSS describing how this view should adjust to different screen sizes.</p>
         </article>
-        <div class="flex-separator"></div>
+        <div class="separator"></div>
         <aside class="one p-1">
             <h2>Use flexbox and grid</h2>
             <p>By applying some smart rules in flexbox or grid, it's possible to design dynamic macro layouts with minimal CSS and without any media queries. That's less work for you—you're making the browser do the calculations instead. To see some examples of modern CSS layouts that are fluid without requiring media queries, see <a class="accent" href="https://1linelayouts.glitch.me/">1linelayouts.com</a>.</p>
-            <p class="accent-color">*For the main page we used flexbox for macro layout</p>
+            <p class="accent">*For the main page we used flexbox for macro layout</p>
             <p>Mobile First means designing for mobile before designing for desktop or any other device (This will make the page display faster on smaller devices because they don't need to compute media queries).                
                 Instead of changing styles when the width gets smaller, we should change the design when the width gets larger.</p>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first">Mobile_first</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first">Mobile first</a>
         </aside> 
     </main>
 
-    <footer class="margin-center border-radius-t-1 surface-4">
+    <footer class="flex direction-column margin-center border-radius-t-1 surface-4">
         <small>Original footer content - &copy; 2022 - you know we copy</small>
         <small>
             <a href="https://www.flaticon.com/free-icons/files-and-folders" title="files and folders icons">Files and folders icons created by Yuan Design - Flaticon</a>

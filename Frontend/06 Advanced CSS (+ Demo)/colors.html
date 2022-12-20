@@ -19,12 +19,12 @@
     <input type="checkbox" id="show-menu" hidden />
     <input type="checkbox" id="change-color-theme" hidden />
 
-    <div class="menu margin-center surface-4 rad-shadow">
+    <div class="menu container margin-center surface-4 rad-shadow">
         <label for="show-menu" class="show-menu-btn margin-center min-content p-1">
             <i class="gg-menu-boxed"></i>
         </label>
 
-        <nav class="margin-center p-1">
+        <nav class="flex wrap justify-space-around column-to-row-query margin-center p-1">
             <a href="/">Home</a>
             <a href="/colors.html">Colors</a>
             <a href="/cards.html">Cards</a>
@@ -40,7 +40,7 @@
         <h1 class="rainbow-text unselectable">a little bit of CSS</h1>
     </header>
 
-    <main class="margin-center flex-container">
+    <main class="margin-center flex column-to-row-query">
         <article class="p-1 two">
             <form id="theme-switcher">
                 <div>
@@ -103,7 +103,7 @@
                 </div>
             </section>
         </article>
-        <div class="flex-separator"></div>
+        <div class="separator"></div>
         <aside class="p-1 one">
             <h2>Use HSL colors</h2>
             <p>Info about css colors: <a href="https://web.dev/learn/css/color/">web.dev/learn/css/color</a>.</p>
@@ -111,7 +111,7 @@
         </aside> 
     </main>
 
-    <footer class="margin-center border-radius-t-1 surface-4" >
+    <footer class="flex direction-column margin-center border-radius-t-1 surface-4" >
         <small>Original footer content - &copy; 2022 - you know we copy</small>
         <small>
             <a href="https://www.flaticon.com/free-icons/files-and-folders" title="files and folders icons">Files and folders icons created by Yuan Design - Flaticon</a>

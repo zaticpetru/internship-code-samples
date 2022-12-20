@@ -1,3 +1,5 @@
+@import 'utils/flex-box.css';
+
 /* || Utility classes */
 .no-bullet {
     list-style: none;
@@ -47,11 +49,8 @@
     border-radius: 1rem 1rem 0 0;
 }
 
-.accent-color {
-    color: var(--accent);
-}
-
 .m-1-y {
+    /* ? Use logical properties -block -inline when possible */
     /* https://web.dev/learn/css/logical-properties/ */
     margin-block: var(--base-spacing);
     /* equivalent to: */
@@ -103,14 +102,6 @@
     padding-block: calc(var(--base-spacing) * 2);
 }
 
-
-.flex-separator {
-    align-self: stretch;
-    margin: 1rem;
-
-    border: var(--text1) 1px solid;
-}
-
 .border-left-separator {
     border-left: var(--text1) 2px solid;
 }
@@ -133,10 +124,6 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
 }
 
 .overflow-auto {

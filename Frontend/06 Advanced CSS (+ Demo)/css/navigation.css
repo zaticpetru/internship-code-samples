@@ -1,0 +1,83 @@
+/* || navigation menu styling */
+
+/* ! using mobile first approach - we are writing styles for mobile first,
+   ! then add/overwrite in media queries for wider screens */
+
+.menu {
+  position: fixed;
+  width: 100%;
+  
+  /* bottom: -12.5rem; */
+  bottom: var(--nav-height--);
+
+  text-align: center;
+  font-weight: bold;
+
+  border: var(--surface3) solid 1px;
+  border-radius: 1rem 1rem 0 0;
+
+  /** open menu animation from bottom: -12.5 rem to 0 */
+  transition: bottom 0.5s ease-in-out;
+  /** Further reading: https://web.dev/learn/css/transitions/ */
+
+  z-index: 2;
+}
+
+#show-menu:checked ~ .menu {
+  /** animation triggered on :checked state of checkbox for menu  */
+  bottom: 0;
+}
+
+.show-menu-btn {
+  display: block;
+  transition: color 500ms;
+}
+
+#show-menu:checked ~ .menu .show-menu-btn {
+  color: var(--failure);
+}
+
+nav {
+  width: 90%;
+  max-width: calc(var(--container-max-width) / 2);
+  height: var(--nav-height);
+
+  align-items: center;  
+  padding-bottom: var(--base-spacing);
+
+  border-top: var(--text1) solid 1px;
+}
+
+nav a,
+nav label {
+  padding: var(--base-spacing);
+}
+
+nav .gg-dark-mode {
+  transition: color 1s ease-in;
+}
+
+footer {
+  /* creating space for fixed menu on bottom for mobile view */
+  padding-bottom: 3.5rem;
+}
+
+/* media queries for wider screens than mobile */
+@media (min-width: 600px) {
+  .menu {
+      line-height: 1;
+      border-radius: 0 0 1rem 1rem;
+      position: initial;
+  }
+  .show-menu-btn {
+      display: none;
+  }
+
+  nav {
+      height: auto;
+      border-top: none;
+  }
+  footer {
+      padding-bottom: var(--base-spacing);
+  }
+}
