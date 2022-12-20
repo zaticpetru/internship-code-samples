@@ -21,13 +21,17 @@
         calc(var(--accent-lightness) / 1.25)
     );
     
-    /*  In a light theme, text should be very dark.
-    Notice how the lightness of the following colors is low,
-    well under 50% */
+    /* 
+        In a light theme, text should be very dark.
+        Notice how the lightness of the following colors is low,
+        well under 50%
+    */
     --text1-light: hsl(var(--brand-hue) var(--brand-saturation) 10%);
     --text2-light: hsl(var(--brand-hue) 30% 30%);
-    /* but not all the way to 0% (white color),
-    we reserve black and white exclusively for brightest highlights and darkest shadows */
+    /*
+        but not all the way to 0% (white color),
+        we reserve black and white exclusively for brightest highlights and darkest shadows
+    */
 
     /* colors for backgrounds, borders and other decorative surfaces */
     --surface1-light: hsl(var(--brand-hue) 20% 92%);
@@ -120,7 +124,8 @@
     --lightness: var(--light-lightness);
 }
 
-/* using media query to set dark theme automatically */
+/** using media query to set dark theme automatically */
+/** https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme */
 @media (prefers-color-scheme: dark) {
     :root {
         color-scheme: dark;
@@ -138,7 +143,7 @@
         --lightness: var(--dark-lightness);
     }
 }
-
+/** https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme */
 [color-scheme="light"] {
     color-scheme: light;
     --brand: var(--brand-light);

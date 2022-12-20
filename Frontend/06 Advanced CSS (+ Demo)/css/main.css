@@ -6,11 +6,14 @@
 @import url('https://css.gg/menu-boxed.css');
 @import url('https://css.gg/dark-mode.css');
 
-/* || Colors */
-@import 'colors.css';
-
 /* || Utility classes */
 @import 'utils.css';
+
+/* || Navigation styles, menu */
+@import 'navigation.css';
+
+/* || Colors */
+@import 'colors.css';
 
 /* || Micro-layouts */
 @import 'micro-layouts.css';
@@ -18,8 +21,6 @@
 /* || Grid */
 @import 'grid.css';
 
-/* || Navigation styles, menu */
-@import 'navigation.css';
 
 /** Further reading, CSS @import: https://developer.mozilla.org/en-US/docs/Web/CSS/@import  */
 

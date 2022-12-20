@@ -3,6 +3,9 @@
 /* ! using mobile first approach - we are writing styles for mobile first,
    ! then add/overwrite in media queries for wider screens */
 
+/** https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/internet-device-use-statistics/ */
+/** https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet */
+
 .menu {
   position: fixed;
   width: 100%;
