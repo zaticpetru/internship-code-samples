@@ -29,8 +29,7 @@
     max-inline-size: 125px;
 }
 
-/* todo: rename to 200px */
-.max-width-150px {
+.max-width-200px {
     max-width: none;
 }
 
@@ -38,7 +37,7 @@
     color: var(--info);
 }
 
-#toggle-max-width:checked ~ .ex-area .ex-container .max-width-150px {
+#toggle-max-width:checked ~ .ex-area .ex-container .max-width-200px {
     max-width: 200px;
 }
 
