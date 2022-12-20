@@ -92,6 +92,11 @@ footer {
     max-width: var(--container-max-width);
 }
 
+main {
+    /* fill page */
+    min-height: 90vh;
+} 
+
 /* || main content styling */
 /* using universal selector * to apply styling to all children */
 
@@ -106,7 +111,6 @@ footer {
 
 @media (min-width: 600px) {
     .flex.column-to-row-query {
-        /* display: flex; */
         flex-direction: row;
     }
     .flex.column-to-row-query .two {
