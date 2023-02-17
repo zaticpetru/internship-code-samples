@@ -13,20 +13,20 @@
     gap: var(--base-spacing);
 }
 
-.card-1 .content {
-    /* take 3/4 of available space */
-    flex: 3;
-    /* don't get smaller than 200px */
-    min-inline-size: 150px;
-    align-self: stretch;
-}
-
 .card-1 .illustration {
     /* take 1/4 of available space */
     flex: 1;
     /* limit size to min 100px max 125px */
     min-inline-size: 100px;
     max-inline-size: 125px;
+}
+
+.card-1 .content {
+    /* take 3/4 of available space */
+    flex: 3;
+    /* don't get smaller than 200px */
+    min-inline-size: 150px;
+    align-self: stretch;
 }
 
 .max-width-200px {
@@ -73,5 +73,11 @@
     .card-2 {
         flex-direction: row;
         background-color: var(--info);
+    }
+}
+
+@container (width < 200px) {
+    .card-2 .illustration{
+        display: none;
     }
 }

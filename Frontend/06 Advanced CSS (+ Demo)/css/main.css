@@ -43,10 +43,10 @@ html {
     /*? rem - relative to font-size of the root element - html */
     /*? default font size for html is 16px */
     /*? 14px - size used to calculate rem */
-    font-size: 14px;
+    font-size: 16px;
     /* line height - used to set distances between lines */
     /* 2 -> 2 * element's own font size  */
-    line-height: 2;
+    line-height: 2; /* 32px */
 }
 
 body {
